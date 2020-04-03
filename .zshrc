@@ -161,3 +161,5 @@ if [ -f ~/.zsh_aliases ]; then
         . ~/.zsh_aliases
 fi
 
+alias config='/usr/bin/git --git-dir=/Users/cody/.cfg/ --work-tree=/Users/cody'
+
