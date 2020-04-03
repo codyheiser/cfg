@@ -1,10 +1,12 @@
+# common rc file containing:
+#	prompt & zsh theme
+#	python virtual envs
+#	zsh theme
+#	common navigation aliases
+
 # terminal color preferences
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-
-# PATH
-export PATH=$PATH:/usr/local/bin/plink_mac_20190215/
-export PATH=$PATH:/Users/cody/samtools-1.9/bin/
 
 # activate virtual env wrapper
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
@@ -20,8 +22,6 @@ export PIP_REQUIRE_VIRTUALENV=true
 gpip3(){
         PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
 }
-
-###
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -156,13 +156,8 @@ alias lal='ls -al'
 alias grep='grep --color'
 alias grepl='grep -lr'
 
-# SSH
-alias stat2='ssh STAT2@10.103.27.189'
-alias venters-server='ssh bryan@10.103.27.249'
-alias chuck-server='ssh cody@10.141.25.150'
-alias lab-tunnel-chuck='ssh -N -L 8080:localhost:8080 cody@10.141.25.150'
-alias lab-tunnel-cody='ssh -N -L 8080:localhost:8080 cody@10.141.26.41'
-alias lab-tunnel-threadripper='ssh -N -L 8080:localhost:8080 cody@10.141.26.164'
-alias cody-mini='ssh cody@10.141.26.41'
-alias threadripper='ssh cody@10.141.26.164'
-alias config='/usr/bin/git --git-dir=/Users/cody/.cfg/ --work-tree=/Users/cody'
+# source host-specific aliases
+if [ -f ~/.zsh_aliases ]; then
+        . ~/.zsh_aliases
+fi
+
