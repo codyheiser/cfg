@@ -9,10 +9,10 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # activate virtual env wrapper
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export WORKON_HOME=/Users/cody/.virtualenvs/
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs/
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 # pip should only run if a virtual env is currently activated
 export PIP_REQUIRE_VIRTUALENV=true
@@ -27,7 +27,7 @@ gpip3(){
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/cody/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -40,14 +40,6 @@ ZSH_THEME=""
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-### PURE prompt ###
-autoload -U promptinit; promptinit
-# change the path color
-zstyle :prompt:pure:path color cyan
-# turn on git stash status
-zstyle :prompt:pure:git:stash show yes
-prompt pure
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -105,6 +97,15 @@ plugins=(git virtualenvwrapper direnv history osx z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+### PURE prompt ###
+fpath+=$HOME/.zsh/pure
+autoload -U promptinit; promptinit
+# change the path color
+zstyle :prompt:pure:path color cyan
+# turn on git stash status
+zstyle :prompt:pure:git:stash show yes
+prompt pure
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -161,5 +162,5 @@ if [ -f ~/.zsh_aliases ]; then
         . ~/.zsh_aliases
 fi
 
-alias config='/usr/bin/git --git-dir=/Users/cody/.cfg/ --work-tree=/Users/cody'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
