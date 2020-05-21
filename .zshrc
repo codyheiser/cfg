@@ -9,10 +9,10 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # activate virtual env wrapper
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
+export VIRTUALENVWRAPPER_PYTHON=`which python3`
 export WORKON_HOME=$HOME/.virtualenvs/
-source /usr/local/bin/virtualenvwrapper.sh
+source $VIRTUALENVWRAPPER_SCRIPT
 
 # pip should only run if a virtual env is currently activated
 export PIP_REQUIRE_VIRTUALENV=true
