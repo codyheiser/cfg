@@ -5,8 +5,9 @@
 #	common navigation aliases
 
 # terminal color preferences
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+#export CLICOLOR=1
+#export CLICOLOR_FORCE=1
+#export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # activate virtual env wrapper
 export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
@@ -45,7 +46,7 @@ ZSH_THEME=""
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -66,15 +67,15 @@ ZSH_THEME=""
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -92,7 +93,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenvwrapper direnv history osx z zsh-syntax-highlighting)
+plugins=(git virtualenvwrapper history osx z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -148,7 +149,7 @@ alias ..='cd ..'
 alias cd..='cd ..'
 
 # ls options
-alias ls='ls -F'
+alias ls='ls -F --color'
 alias la='ls -a'
 alias lal='ls -al'
 
