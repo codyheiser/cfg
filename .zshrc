@@ -4,11 +4,6 @@
 #	zsh theme
 #	common navigation aliases
 
-# terminal color preferences
-#export CLICOLOR=1
-#export CLICOLOR_FORCE=1
-#export LSCOLORS=GxFxCxDxBxegedabagaced
-
 # activate virtual env wrapper
 export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
 export VIRTUALENVWRAPPER_PYTHON=`which python3`
@@ -149,7 +144,7 @@ alias ..='cd ..'
 alias cd..='cd ..'
 
 # ls options
-alias ls='ls -F --color'
+alias ls='ls -FG'
 alias la='ls -a'
 alias lal='ls -al'
 
