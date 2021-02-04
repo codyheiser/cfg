@@ -4,6 +4,11 @@
 #	zsh theme
 #	common navigation aliases
 
+# source host-specific aliases
+if [ -f ~/.zsh_aliases ]; then
+	. ~/.zsh_aliases
+fi
+
 # activate virtual env wrapper
 export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
 export VIRTUALENVWRAPPER_PYTHON=`which python3`
@@ -153,11 +158,6 @@ alias lal='ls -al'
 # grep options
 alias grep='grep --color'
 alias grepl='grep -lr'
-
-# source host-specific aliases
-if [ -f ~/.zsh_aliases ]; then
-        . ~/.zsh_aliases
-fi
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
