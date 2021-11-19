@@ -40,3 +40,11 @@ git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 ```
 
 #### 4. `source .zshrc` and you're good to go
+In order to get virtual environments set up for Python3, you'll need to run:
+```
+gpip3 install virtualenv virtualenvwrapper
+
+source /usr/local/bin/virtualenvwrapper.sh
+
+source ~/.zshrc
+```
