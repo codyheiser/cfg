@@ -1,6 +1,6 @@
 [user]
 	email = codyheiser49@gmail.com
-	name = Cody Heiser
+	name = codyheiser
 [alias]
 	co = checkout
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
@@ -24,7 +24,6 @@
 	changed = green
 	untracked = cyan
 [credential]
-	helper = osxkeychain
 	useHttpPath = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
