@@ -10,8 +10,8 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 # activate virtual env wrapper
-export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
 export VIRTUALENVWRAPPER_PYTHON=`which python3`
+export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
 export WORKON_HOME=$HOME/.virtualenvs/
 
 # pip should only run if a virtual env is currently activated
@@ -95,7 +95,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenvwrapper history osx z zsh-syntax-highlighting)
+plugins=(git virtualenvwrapper history macos z zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
