@@ -36,7 +36,10 @@ mkdir -p "$HOME/.zsh"
 git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 
 # z is a useful plugin for directory jumping
-git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
+git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
+
+# macos plugin if working on Mac (which you should be)
+git clone https://github.com/joow/macos.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/macos
 ```
 
 #### 4. `source .zshrc` and you're good to go
