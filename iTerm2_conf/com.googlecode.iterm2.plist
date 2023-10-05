@@ -22,6 +22,10 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>262401</integer>
+	<key>NeverWarnAboutShortLivedSessions_85234B70-F90F-4FE5-86EE-CBE8A2025A00</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_85234B70-F90F-4FE5-86EE-CBE8A2025A00_selection</key>
+	<integer>0</integer>
 	<key>NeverWarnAboutShortLivedSessions_AD8D2CE5-EBA5-4CEE-9C98-DEEA1C505F4F</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_AD8D2CE5-EBA5-4CEE-9C98-DEEA1C505F4F_selection</key>
